@@ -1,5 +1,28 @@
 /* Zadatak broj cetiri kantonalno zenica 2015
 Deklaracija koje biblioteke koristim. */
+/* For foregin people who dont understand Bosnian. The task sounds like this: 
+Every resident of an unknown country has their own unique citizen identification number (JMBG). In that country, the JMBG is a nineteen-digit 
+number of the form: DDMMGGGGAAAAAAAAAAAK where the digits DD indicate the day, MM the month, and YYYY the year of birth. 
+The year of birth is a natural number between 0001 and 9999. A year is a leap year if it is divisible by 4, 
+but not divisible by 100 or if it is divisible by 400. The digits marked with A are considered arbitrary, 
+and K is a check digit obtained using the following algorithm:
+1. Let's mark all digits in the JMBG except the last one with Z1 to Z18.
+2. S=(10*Z1+9*Z2+8*Z3+...+2*Z9+10*Z10+9*Z11+8*Z12+...+2*Z19) mod 19.
+3. If s <= 9 then K = S, otherwise K = 19 - S.
+When hunting criminals, the police often exchange their JMBGs among themselves. However, as their walkie-talkies are quite outdated, 
+it often happens that the policeman who receives the information and writes down the JMBG on paper does not hear some digits, 
+so he marks them with an X on the paper.
+The policeman hands over the jmbg written in this way to his IT colleague.
+Write a program that will determine how many different valid JMBGs can be obtained from the record obtained by the IT specialist.
+Input data: a string of 19 characters composed of the digits 0...9 and the character X.
+Output data: requested number of valid JMBG from the task text.
+Note: the solution will fit into a 64-bit integer data type ( long long ).
+Example:
+For input: 3X1X1639XX5XX1X6X85
+Output is: 526315
+For entrance: 30121952121234567XX
+Output is: 10.
+The coments and variable names are in bosnian since I wanted my friends to understand it too. */
 #include <iostream>
 #include <string>
 #include <cmath>
